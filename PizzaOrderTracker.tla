@@ -19,6 +19,8 @@ Next ==
        /\ orderState' = "Delivering"
     \/ /\ orderState = "Delivering"
        /\ orderState' = "Completed"
+    \/ /\ orderState = "Completed"
+       /\ orderState' = "Order Created"  (* Reset the system for a new order *)
 
 (* Define the invariant: Cannot be Delivered before Baked *)
 Invariant ==
